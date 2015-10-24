@@ -1,7 +1,7 @@
 ---
 layout: post
 author: 'Huang Wei'
-title: "中标专用 OS 研发部招聘若干 Linux 工程师"
+title: "中标招聘若干 Linux 工程师"
 group: jobs
 permalink: /cs2c-rd-center-os-department-linux-jobs/
 description: "中标软件招聘 Linux 驱动与内核开发工程师"
@@ -44,7 +44,7 @@ tags:
   4. 熟悉 Shell/Python/Perl 等常用脚本工具语言中的一种
   5. 具备团队协作开发能力，能够出差。
 
-* __优选条件__ 
+* __优选条件__
 
   1. 熟悉龙芯、申威或 ARM 架构
   2. 参与过 Linux 社区相关项目的开发。
