@@ -51,6 +51,8 @@
     }
 
     #toc {
+        min-width: 280px;
+
         ul {
             padding: 0;
             list-style: none;
@@ -58,9 +60,6 @@
             li {
                 margin: 0;
                 padding: 0;
-                overflow:hidden;
-                white-space:nowrap;
-                //text-overflow:ellipsis;
 
                 a {
                     font-size: 1.5rem;
@@ -71,20 +70,24 @@
                     color: #aaaaaa;
                 }
 
-                &.toc-active {
+                &.active {
                     a {
-                        color: #aaaaaa;
+                        background-color: #dddddd;
                     }
                 }
-                
-                &.h3 {
-                    margin-left: 20px;
-                }
-
-                &.h4 {
-                    margin-left: 40px;
-                }
             }
+        }
+
+        .panel-body > ul > li > a {
+            padding-left: 30px;
+        }
+
+        .panel-body > ul > ul > li > a {
+            padding-left: 45px;
+        }
+
+        .panel-body > ul > ul > ul > li > a {
+            padding-left: 60px;
         }
 
         &.affix {
