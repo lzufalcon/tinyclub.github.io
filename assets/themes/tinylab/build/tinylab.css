@@ -51,36 +51,33 @@
 #sidebar #author .popover, #sidebar #author .popover-title {
   border-radius: 0; }
 
-#sidebar #toc ul {
-  padding: 0;
-  list-style: none; }
-  #sidebar #toc ul li {
-    margin: 0;
+#sidebar #toc {
+  min-width: 280px; }
+  #sidebar #toc ul {
     padding: 0;
-    overflow: hidden;
-    white-space: nowrap; }
-    #sidebar #toc ul li a {
-      font-size: 1.5rem;
-      color: #333333; }
-    #sidebar #toc ul li a:hover {
-      color: #aaaaaa; }
-    #sidebar #toc ul li.toc-active a {
-      color: #aaaaaa; }
-    #sidebar #toc ul li.h3 {
-      margin-left: 20px; }
-    #sidebar #toc ul li.h4 {
-      margin-left: 40px; }
-
-#sidebar #toc.affix {
-  top: 10px;
-  max-width: 280px; }
+    list-style: none; }
+    #sidebar #toc ul li {
+      margin: 0;
+      padding: 0; }
+      #sidebar #toc ul li a {
+        font-size: 1.5rem;
+        color: #333333; }
+      #sidebar #toc ul li a:hover {
+        color: #aaaaaa; }
+      #sidebar #toc ul li.active a {
+        background-color: #dddddd; }
+  #sidebar #toc .panel-body > ul > li > a {
+    padding-left: 30px; }
+  #sidebar #toc .panel-body > ul > ul > li > a {
+    padding-left: 45px; }
+  #sidebar #toc .panel-body > ul > ul > ul > li > a {
+    padding-left: 60px; }
+  #sidebar #toc.affix {
+    top: 10px;
+    max-width: 280px; }
 
 @media screen and (max-width: 768px) {
   #sidebar #toc {
-    display: none; } }
-
-@media screen and (max-width: 768px) {
-  #sidebar {
     display: none; } }
 
 #articles_list .article .article-title a:hover {
@@ -137,21 +134,21 @@
       #article .article-information .article-group ul li i, #article .article-information .article-category ul li i, #article .article-information .article-tag ul li i, #article .article-information .article-album ul li i {
         font-size: 100%; }
 
-#article .article_pagination ul {
+#article .article-pagination ul {
   margin: 0;
   padding: 0; }
-  #article .article_pagination ul li {
+  #article .article-pagination ul li {
     display: inline;
     margin-left: 10px;
     margin-right: 10px; }
-    #article .article_pagination ul li i {
+    #article .article-pagination ul li i {
       margin-bottom: 7px; }
-    #article .article_pagination ul li a {
+    #article .article-pagination ul li a {
       color: #333333;
       font-size: 1.5rem; }
-    #article .article_pagination ul li a:hover {
+    #article .article-pagination ul li a:hover {
       color: #aaaaaa; }
-    #article .article_pagination ul li.disabled a {
+    #article .article-pagination ul li.disabled a {
       color: #e4e4e4; }
 
 #article table {

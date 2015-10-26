@@ -70,3 +70,33 @@ Will:
   site: tinylab.org
   email: wumin156@126.com
   github: willneo
+
+Li Zhaozhong:
+  name : Li Zhaozhong
+  nickname: Jason Lee
+  archive: true
+  article: true
+  site: www.lizhaozhong.info
+  email : ldm5235@gmail.com
+  github : lzz5235
+  info: Linux / RAS / Simple coder
+
+
+Zhou Yuanbin:
+  name: Zhou Yuanbin
+  nickname: yuanbin
+  archive: true
+  article: true
+  site: tinylab.org
+  email: hduffddybz@gmail.com
+  github: hduffddybz
+  info: RTOS / Real Time Linux
+
+Huang Wei:
+  name: Huang Wei
+  nickname: daway.huang
+  archive: true
+  article: true
+  email: wei.huang@cs2c.com.cn
+  weibo: daway320
+  info: 中标软件有限公司专用 OS 研发部高级技术经理
