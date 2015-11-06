@@ -3,7 +3,7 @@
  * Author: Peng Jingwen
  * Visit 'https://prettyxw.github.io/Spry/' for more information.
  * 
- * Last Modified: Fri, 09 Oct 2015 05:23:55 GMT
+ * Last Modified: Fri, 06 Nov 2015 09:14:37 GMT
  */
 /* helper things */
 /* other helpers for color management */
@@ -2089,24 +2089,24 @@
   font-weight: 700 !important; }
 
 .font-size-tiny {
+  font-size: 1rem !important;
+  line-height: 1.2rem; }
+
+.font-size-small {
   font-size: 1.2rem !important;
   line-height: 1.44rem; }
 
-.font-size-small {
+.font-size-normal {
   font-size: 1.4rem !important;
   line-height: 1.68rem; }
 
-.font-size-normal {
-  font-size: 1.7rem !important;
-  line-height: 2.04rem; }
-
 .font-size-large {
-  font-size: 2rem !important;
-  line-height: 2.4rem; }
+  font-size: 1.8rem !important;
+  line-height: 2.16rem; }
 
 .font-size-large-extreme {
-  font-size: 2.5rem !important;
-  line-height: 3rem; }
+  font-size: 2rem !important;
+  line-height: 2.4rem; }
 
 .font-size-huge {
   font-size: 3rem !important;
@@ -2115,6 +2115,14 @@
 .font-size-huge-extreme {
   font-size: 4rem !important;
   line-height: 4.8rem; }
+
+.font-size-vast {
+  font-size: 5rem !important;
+  line-height: 6rem; }
+
+.font-size-vast-extreme {
+  font-size: 6rem !important;
+  line-height: 7.2rem; }
 
 /* font which will be loaded by browser */
 @font-face {
@@ -5007,9 +5015,9 @@
 * {
   font-family: "Source Sans Pro", "San Francisco", "Lucida Grande", "PingFang SC", "PingFang TC", "Heiti SC", "Heiti TC", "STHeiti", "STXihei", "Arial", "Microsoft YaHei";
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   text-decoration: none;
-  line-height: 2.04rem;
+  line-height: 1.68rem;
   word-spacing: 0.3rem;
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -5024,45 +5032,45 @@ html, body {
 
 h1 {
   font-weight: normal;
-  font-size: 4rem;
+  font-size: 3.6rem;
   margin: 1.6rem 0;
   padding: 0;
-  line-height: 4.8rem; }
+  line-height: 4.32rem; }
 
 h2 {
   font-weight: normal;
-  font-size: 3.2rem;
+  font-size: 3rem;
   margin: 1.6rem 0;
   padding: 0;
-  line-height: 3.84rem; }
+  line-height: 3.6rem; }
 
 h3 {
   font-weight: normal;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   margin: 1.6rem 0;
   padding: 0;
-  line-height: 3.12rem; }
+  line-height: 2.88rem; }
 
 h4 {
   font-weight: normal;
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   margin: 1.6rem 0;
   padding: 0;
-  line-height: 2.76rem; }
+  line-height: 2.16rem; }
 
 h5 {
   font-weight: normal;
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin: 1.6rem 0;
   padding: 0;
-  line-height: 2.4rem; }
+  line-height: 1.68rem; }
 
 h6 {
   font-weight: normal;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   margin: 1.6rem 0;
   padding: 0;
-  line-height: 1.04rem; }
+  line-height: 1.44rem; }
 
 p {
   margin: 1.6rem 0;
@@ -5110,13 +5118,13 @@ sub {
 
 ol, ul, li {
   font-weight: normal;
-  font-size: 1.8rem;
-  line-height: 2.88rem; }
+  font-size: 1.5rem;
+  line-height: 1.8rem; }
 
 table, td, th {
   font-weight: normal;
-  font-size: 2rem;
-  line-height: 2.4rem; }
+  font-size: 1.8rem;
+  line-height: 2.16rem; }
 
 .article, article *, article, article * {
   font-family: "Source Serif Pro", "San Francisco", "Lucida Grande", "PingFang SC", "PingFang TC", "Heiti SC", "Heiti TC", "STHeiti", "STXihei", "Arial", "Microsoft YaHei";
