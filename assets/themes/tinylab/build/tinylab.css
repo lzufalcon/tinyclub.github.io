@@ -5,7 +5,8 @@
     border-radius: 0; }
     #top_wrap #navbar .navbar .navbar-nav a {
       font-size: 1.5rem;
-      margin: 0 -3px; }
+      margin: 0 -3px;
+      text-align: center; }
     #top_wrap #navbar .navbar .navbar-nav a:hover {
       color: #eeeeee; }
     #top_wrap #navbar .navbar .navbar-nav .active {
@@ -170,6 +171,82 @@
 
 #article tbody tr:hover {
   background-color: #e5e5e5; }
+
+.float-button {
+  font-size: 1.2rem;
+  border: none;
+  background: #22272e;
+  color: #ffffff;
+  text-align: center;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px #171717;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  z-index: 11; }
+
+.float-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 2; }
+  .float-overlay.on-overlay {
+    visibility: visible;
+    opacity: 1; }
+
+.float-wrapper {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  z-index: 10; }
+  .float-wrapper .float-action-button {
+    font-size: 1.2rem;
+    border: none;
+    background: #22272e;
+    text-align: center;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px #171717;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 11;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    .float-wrapper .float-action-button a {
+      color: #ffffff; }
+
+.float-wrapper.opened-nav .float-action-button:first-child {
+  left: 10px;
+  bottom: 110px; }
+
+.float-wrapper.opened-nav .float-action-button:nth-child(2) {
+  left: 65px;
+  bottom: 95px; }
+
+.float-wrapper.opened-nav .float-action-button:nth-child(3) {
+  left: 100px;
+  bottom: 60px; }
+
+.float-wrapper.opened-nav .float-action-button:nth-child(4) {
+  left: 110px;
+  bottom: 10px; }
 
 .str0 {
   stroke: black;

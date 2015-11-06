@@ -31,6 +31,9 @@ gulp.task('watch', function() {
     gulp.watch('stylesheets/*.scss', function(event) {
         console.log(`File ${event.path} was ${event.type} running tasks...`);
         buildStyleSheets();
+    });
+    gulp.watch('javascripts/*.js', function(event) {
+        console.log(`File ${event.path} was ${event.type} running tasks...`);
         buildJavaScripts();
     });
 });
