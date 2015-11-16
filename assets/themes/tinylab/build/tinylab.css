@@ -177,16 +177,20 @@
   font-size: 3rem; }
 
 #article h2 {
-  font-size: 2.2rem; }
+  font-size: 2.2rem;
+  color: #e43d37; }
 
 #article h3 {
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  color: #5fb84a; }
 
 #article h4 {
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  color: #4587c7; }
 
 #article h5 {
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  color: #fbd133; }
 
 #article h6 {
   font-size: 1rem; }

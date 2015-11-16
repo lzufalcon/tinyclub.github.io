@@ -56,7 +56,10 @@
                             prefix = this.countH2 + '.' + this.countH3 + '.' + this.countH4 + '.' + this.countH5 + ' ';
                     }
 
-                    return prefix + $heading.text();
+                    // Adding Numbers to Article Content
+                    $heading[0].textContent = prefix + $heading[0].textContent;
+
+                    return $heading.text();
                 }
             });
         });
