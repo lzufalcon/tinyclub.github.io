@@ -1,0 +1,28 @@
+<div id="recent_comments">
+    <div class="panel panel-default">
+        <div class="panel-heading row">
+            <h3 class="panel-title column">最新评论</h3>
+            <span class="pull-right clickable"><i class="fa fa-angle-up"></i></span>
+            <!--<span class="pull-right clickable panel-collapsed"><i class="fa fa-angle-down"></i></span>-->
+        </div>
+        <div class="panel-body">
+            <!-- 多说最新评论 start -->
+            <div class="ds-recent-comments" data-num-items="10" data-show-avatars="1" data-show-time="1"  data-show-title="0" data-show-admin="1" data-excerpt-length="70"></div>
+            <!-- 多说最新评论 end -->
+        </div>
+    </div>
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"tinylab"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            /* ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js'; */
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//duoshuo-static.u.qiniudn.com/embed-20150727.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+            || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>

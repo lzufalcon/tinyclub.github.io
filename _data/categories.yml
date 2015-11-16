@@ -145,6 +145,8 @@
     - name: 开发板
       categories:
         - name: 树莓派
+        - name: pcDuino
+        - name: NodeMCU
     - name: 模拟器
       categories:
         - name: Qemu
@@ -255,6 +257,7 @@
         - name: Goldfish 内核驱动
     - name: Android 系统
       categories:
+        - name: Android 日志管理
         - name: Android 启动管理
         - name: Android 电源管理
         - name: Android 显示系统
@@ -337,12 +340,8 @@
         - name: vnStatSVG
         - name: Linux 0.11 Lab
         - name: TinyDraw
+        - name: B9Creator
     - name: 开源书籍
-
-- name: 技术交流
-  categories:
-    - name: 泰晓沙龙
-    - name: 关于我们
 
 - name: 招聘求职
   categories:
@@ -354,6 +353,13 @@
       categories:
         - name: Linux 简历
         - name: Android 简历
+
+- name: 泰晓科技
+  categories:
+    - name: 泰晓沙龙
+    - name: 泰晓福利
+    - name: 泰晓周报
+    - name: 关于我们
 
 - name: 其他杂项
   categories:
