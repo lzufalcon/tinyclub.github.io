@@ -21,9 +21,7 @@
 
 {% include themes/tinylab/partials/sidebar/author.html %}
 
-{% if page.ctg == true %}
-    {% include themes/tinylab/partials/sidebar/categories.html %}
-{% endif %}
+{% include themes/tinylab/partials/sidebar/categories.html %}
 
 {% if page.group != "home" %}
     {% include themes/tinylab/partials/sidebar/albums.html %}
@@ -39,6 +37,4 @@
 
 {% include themes/tinylab/partials/sidebar/join_us.html %}
 
-{% if page.toc != false %}
-    {% include themes/tinylab/partials/sidebar/toc.html %}
-{% endif %}
+{% include themes/tinylab/partials/sidebar/toc.html %}
