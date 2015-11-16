@@ -11,8 +11,8 @@ order: 10
 ---
 
 <section id="home">
-  {% assign articles = site.posts %}
-  {% assign condition = 'group' %}
-  {% assign value = 'jobs' %}
-  {% include widgets/articles %}
+    {% assign articles = site.posts %}
+    {% assign condition = 'group' %}
+    {% assign value = 'jobs' %}
+    {% include themes/tinylab/partials/content/articles.html %}
 </section>

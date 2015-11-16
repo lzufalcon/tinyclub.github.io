@@ -8,14 +8,14 @@
             {% else %}
                 {% unless article[{{condition}}] contains {{value}} %}
                     {% continue %}
-                {%endunless%}
+                {% endunless %}
             {% endif %}
         {% endif %}
 
         <div class="article">
             <div class="article-title">
                 <h3>
-                    <a class="font-weight-thin color-spry-grey-mine" href="{{ article.url }}">
+                    <a class="color-spry-grey-mine" href="{{ article.url }}">
                         {% if article.desc %}<span>{{ article.desc }}</span>{% endif %}{{ article.title }}
                     </a>
                 </h3>

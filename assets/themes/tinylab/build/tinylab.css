@@ -94,9 +94,10 @@
   padding-right: 0; }
   #articles_list .article .article-information .article-group a, #articles_list .article .article-information .article-category a, #articles_list .article .article-information .article-album a {
     font-size: 1.3rem;
-    color: #363d48;
-    background-color: #e4e4e4;
-    padding: 2px 10px; }
+    color: #616e7d;
+    padding: 2px 5px; }
+  #articles_list .article .article-information .article-group i, #articles_list .article .article-information .article-category i, #articles_list .article .article-information .article-album i {
+    color: #616e7d; }
   #articles_list .article .article-information .article-group a:hover, #articles_list .article .article-information .article-category a:hover, #articles_list .article .article-information .article-album a:hover {
     color: #aaaaaa; }
   #articles_list .article .article-information .article-group i, #articles_list .article .article-information .article-category i, #articles_list .article .article-information .article-album i {
@@ -177,16 +178,20 @@
   font-size: 3rem; }
 
 #article h2 {
-  font-size: 2.2rem; }
+  font-size: 2.2rem;
+  color: #e43d37; }
 
 #article h3 {
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  color: #5fb84a; }
 
 #article h4 {
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  color: #4587c7; }
 
 #article h5 {
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  color: #fbd133; }
 
 #article h6 {
   font-size: 1rem; }
