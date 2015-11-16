@@ -136,6 +136,18 @@ blockquote p {
 
     overflow: hidden
 }
+div.weekly blockquote {
+    margin-left: 2.4em;
+}
+div.weekly blockquote p {
+    padding-left: 0;
+    color: #53575f;
+}
+div.weekly p {
+    padding-left: 2em;
+    text-indent: 0;
+    color: #a6aaa9;
+}
 ins {
     background-color: #ff9;
     color: #000;
@@ -233,9 +245,9 @@ body {
     font-family: 'Lucida Grande', 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'WenQuanYi Micro Hei', sans-serif, 'SimSun', "宋体", 'Heiti', "黑体";
     font-size: 13.34px;
     *font-size: small;
-    -moz-transform: scale(1);
+    -moz-transform: scale(1.1);
     -moz-transform-origin: center top 0;
-    zoom: 1
+    zoom: 1.1
 }
 select,
 input,
@@ -312,9 +324,13 @@ a:active {
 }
 
 #wrap,
-#top,
 #top-wrap-inner {
-    width: 920px;
+    width: 75%;
+    margin: 0 auto
+}
+
+#top {
+    width: 100%;
     margin: 0 auto
 }
 

@@ -17,9 +17,6 @@
   #top_wrap #navbar .navbar-default .navbar-nav > .active > a:focus,
   #top_wrap #navbar .navbar-default .navbar-nav > .active > a:hover {
     background-color: transparent; }
-  #top_wrap #navbar .form-control {
-    box-shadow: none;
-    border-radius: 0; }
 
 #sidebar .panel {
   border-radius: 0;
@@ -38,6 +35,10 @@
 
 #sidebar #sidebar_content a:hover div, #sidebar #categories a:hover div, #sidebar #albums a:hover div, #sidebar #recent_posts a:hover div, #sidebar #related_posts a:hover div {
   background-color: #dddddd; }
+
+#sidebar #search .form-control {
+  box-shadow: none;
+  border-radius: 0; }
 
 #sidebar #author a {
   color: #333333; }
@@ -324,3 +325,6 @@ rect.rect0:hover {
   fill-opacity: 0.9;
   stroke: #7a7a7a;
   stroke-width: 1px; }
+
+.container {
+  width: 90%; }
