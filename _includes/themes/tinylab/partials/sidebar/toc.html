@@ -1,28 +1,35 @@
-<div id="toc">
-    <div class="panel panel-default">
-        <div class="panel-heading row">
-            <h3 class="panel-title column">内容列表</h3>
-            <span class="pull-right clickable"><i class="fa fa-angle-up"></i></span>
-            <!--<span class="pull-right clickable panel-collapsed"><i class="fa fa-angle-down"></i></span>-->
-        </div>
-        <div class="panel-body">
+{% if page.toc != false %}
+    <div id="toc">
+        <div class="panel panel-default">
+            <div class="panel-heading row">
+                <h3 class="panel-title column">内容列表</h3>
+                <span class="pull-right clickable"><i class="fa fa-angle-up"></i></span>
+                <!--<span class="pull-right clickable panel-collapsed"><i class="fa fa-angle-down"></i></span>-->
+            </div>
+            <div class="panel-body">
 
+            </div>
         </div>
-    </div>
-    <script>
-        $(function($) {
-            $('#toc .panel .panel-body').tocify({
-                context: '#article',
-                selectors: "h2, h3, h4, h5"
-            });
+        <script>
+            $(function($) {
+                $('#toc .panel .panel-body').tocify({
+                    context: '#article',
+                    selectors: "h2, h3, h4, h5"
+                });
 
-            $('#toc').affix({
-                offset: {
-                    top:$('#toc').position().top
+                var tocItems = $('#toc .panel .panel-body').tocify().data("toc-tocify").items;
+                if (tocItems.length == 0) {
+                    $('#toc').css('display', 'none');
                 }
-            });
 
-            $('#article_content').scrollspy({ target: $('#toc') });
-        });
-    </script>
-</div>
+                $('#toc').affix({
+                    offset: {
+                        top:$('#toc').position().top
+                    }
+                });
+
+                $('#article_content').scrollspy({ target: $('#toc') });
+            });
+        </script>
+    </div>
+{% endif %}
