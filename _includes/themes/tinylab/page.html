@@ -4,6 +4,8 @@
 
     <div class="separator size-1"></div>
 
+    {% include themes/tinylab/partials/content/mobile_toc.html %}
+
     <div id="article_content">
         <div {% if page.group != "home" %} id="main_content_container" {% endif %}>
             {{ content }}

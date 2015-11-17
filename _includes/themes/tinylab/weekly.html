@@ -3,7 +3,7 @@
         <h1>{{ page.title }}</h1>
     </div>
     <div class="article-information">
-        <em>{{ page.author }} 创作于 {{ page.date | date: "%Y-%m-%d" }}</em>
+        <em><a href="#author">{{ page.author }}</a> 创作于 {{ page.date | date: "%Y-%m-%d" }}</em>
         {% if page.tagline %}<small>{{ page.tagline }}</small>{% endif %}
     </div>
 
@@ -12,10 +12,6 @@
     <div class="article-content">
         {{ content }}
     </div>
-
-    <div class="separator size-1"></div>
-
-    <strong>泰晓周报</strong>，汇总一周技术趣闻与文章。
 
     <div class="separator size-1"></div>
 
@@ -39,15 +35,17 @@
         </div>
     </div>
 
-    <div class="separator size-1"></div>
+    <div class="separator size-1" style="background-color: #cacaca"></div>
+
+    <strong>泰晓周报</strong>，汇总一周技术趣闻与文章。
+
+    <div class="separator size-1" style="background-color: #cacaca"></div>
 
     {% if page.license != false %}
         <div class="article-license">
-            <p>本作品由 {{ page.author }} 创作，采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" title="查看协议详细信息" target="_blank">CC BY-NC-SA 4.0 许可协议</a> 进行许可。</p>
+            <p>本作品由 <a href="#author">{{ page.author }}</a> 创作，采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" title="查看协议详细信息" target="_blank">CC BY-NC-SA 4.0 许可协议</a> 进行许可。</p>
         </div>
     {% endif %}
-
-    <div class="separator size-1"></div>
 
     <div class="article-sponsor">
         <table>
@@ -68,7 +66,7 @@
         </table>
     </div>
 
-    <div class="separator size-1"></div>
+    <div class="separator size-1" style="background-color: #cacaca"></div>
 
     <div class="article-pagination" align="center">
         <ul>
