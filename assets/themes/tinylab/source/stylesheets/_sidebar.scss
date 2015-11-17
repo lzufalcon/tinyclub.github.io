@@ -21,6 +21,10 @@
                 padding: 10px;
                 font-size: 1.5rem;
                 color: #333333;
+
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
             }
         }
 
@@ -71,6 +75,10 @@
                 a {
                     font-size: 1.5rem;
                     color: #333333;
+
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
                 }
 
                 a:hover {

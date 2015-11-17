@@ -1,4 +1,4 @@
-{% if page.group != 'navigation' %}
+{% if page.toc != false %}
     <div class="mobile-toc">
         <div class="space size-1"></div>
         <div class="text-center">
@@ -58,7 +58,7 @@
                         }
 
                         // Adding Numbers to Article Content
-                        $heading[0].textContent = prefix + $heading[0].textContent;
+                        $heading[0].childNodes[0].textContent = prefix + $heading[0].childNodes[0].textContent;
 
                         return $heading.text();
                     }

@@ -6,10 +6,8 @@
 
     {% include themes/tinylab/partials/content/mobile_toc.html %}
 
-    <div id="article_content">
-        <div {% if page.group != "home" %} id="main_content_container" {% endif %}>
-            {{ content }}
-        </div>
+    <div class="article-content">
+        {{ content }}
     </div>
 </div>
 

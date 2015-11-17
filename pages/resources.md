@@ -46,7 +46,7 @@ order: 100
             {% endif %}
         {% endfor %}
         {% if size != 0 %}
-            <h3>{{ item.title }}</h3>
+            <h2>{{ item.title }}</h2>
             <ul>
                 {% if site.data[item.data] != nil %}
                     {% assign articles = site.data[item.data] %}

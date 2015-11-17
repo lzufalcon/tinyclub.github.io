@@ -41,7 +41,13 @@ comments: false
     {% endif %}
     {% assign total = total | plus: album.items.size %}
 
-    <h3 id="{{ album.name | downcase | replace:' ','-' | replace:'/','-' }}-ref">{% if album_url != "" %}<a href="{{ album_url }}" title="该专辑已发布为GitBook，点击查看！">{{ album.name}}</a>{% else %}{{ album.name }}{% endif %} <sup>({{ album.items.size }})</sup></h3>
+    {% if album_url != "" %}
+        <a href="{{ album_url }}" title="该专辑已发布为GitBook，点击查看！">
+    {% endif %}
+        <h2 id="{{ album.name | downcase | replace:' ','-' | replace:'/','-' }}-ref">{{album.name}} <sup>({{ album.items.size }})</sup></h2>
+    {% if album_url != "" %}
+        </a>
+    {% endif %}
     <ul>
         {% for post in album.items %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -49,5 +55,5 @@ comments: false
     </ul>
 {% endfor %}
 
-<h3>{{ x_label}}{{ y_label}}统计 <sup>({{ total }})</sup></h3>
+<h2>{{ x_label}}{{ y_label}}统计 <sup>({{ total }})</sup></h2>
 {% include themes/tinylab/partials/content/svg_statistic.html %}

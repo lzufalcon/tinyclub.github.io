@@ -1,73 +1,73 @@
 .str0 {
-    stroke: black;
-    stroke-width: 2;
+    stroke: black !important;
+    stroke-width: 2 !important;
 }
 
 .str1 {
-    stroke: black;
-    stroke-width: 0.5;
-    stroke-dasharray: 0, 1, 0;
+    stroke: black !important;
+    stroke-width: 0.5 !important;
+    stroke-dasharray: 0, 1, 0 !important;
 }
 
 .str2 {
-    stroke: black;
-    stroke-width: 0.5;
-    stroke-dasharray: 0, 0, 1;
+    stroke: black !important;
+    stroke-width: 0.5 !important;
+    stroke-dasharray: 0, 0, 1 !important;
 }
 
 .str3 {
-    stroke: white;
-    stroke-width: 1
+    stroke: white !important;
+    stroke-width: 1 !important;
 }
 
 .str4 {
-    stroke: black;
+    stroke: black !important;
 }
 
 .fil0 {
-    fill: #fafafa;
-    stroke: #cccccc;
-    stroke-width: 1px
+    fill: #fafafa !important;
+    stroke: #cccccc !important;
+    stroke-width: 1px !important;
 }
 
 .fil1 {
-    fill: #fa7a7a
+    fill: #fa7a7a !important;
 }
 
 .fil2 {
-    fill: #00385b
+    fill: #00385b !important;
 }
 
 .anc0 {
-    text-anchor: end;
+    text-anchor: end !important;
 }
 
 .anc1 {
-    text-anchor: middle;
+    text-anchor: middle !important;
 }
 
 .fnt0 {
-    font-size: 15px
+    font-size: 15px !important;
 }
 
 .fnt1 {
-    font-size: 10px
+    font-size: 10px !important;
 }
 
 .gra0 {
-    fill-opacity: 0.7;
-    stroke: #cccccc;
-    stroke-width: 0mm
+    fill-opacity: 0.7 !important;
+    stroke: #cccccc !important;
+    stroke-width: 0mm !important;
 }
 
 rect.rect1:hover {
-    fill-opacity: 0.9;
-    stroke: #fa7a7a;
-    stroke-width: 1mm;
+    fill-opacity: 0.9 !important;
+    stroke: #fa7a7a !important;
+    stroke-width: 1mm !important;
 }
 
 rect.rect0:hover {
-    fill-opacity: 0.9;
-    stroke: #7a7a7a;
-    stroke-width: 1px;
+    fill-opacity: 0.9 !important;
+    stroke: #7a7a7a !important;
+    stroke-width: 1px !important;
 }
