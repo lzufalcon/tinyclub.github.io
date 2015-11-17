@@ -311,9 +311,9 @@
   right: 0;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
   z-index: 2; }
   .float-overlay.on-overlay {
     visibility: visible;
