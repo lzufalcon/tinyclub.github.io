@@ -1,68 +1,70 @@
-<div class="mobile-toc">
-    <div class="space size-1"></div>
-    <div class="text-center">
-        <p>内容列表 [ <a class="mobile-toc-toggle" href="#">隐藏</a> ]</p>
-    </div>
-    <div class="mobile-toc-content">
-    </div>
-    <script>
-        $(function($) {
-            $('.mobile-toc .mobile-toc-toggle').click(function() {
-                if ($('.mobile-toc-content').css('display') == 'none') {
-                    $('.mobile-toc-content').css('display', '');
-                    $('.mobile-toc-toggle').text('隐藏')
-                } else {
-                    $('.mobile-toc-content').css('display', 'none');
-                    $('.mobile-toc-toggle').text('显示')
-                }
-            });
-
-            $('.mobile-toc .mobile-toc-content').toc({
-                'selectors': 'h2, h3, h4, h5',
-                'container': '#article',
-                'smoothScrolling': true,
-                'prefix': 'toc',
-                'onHighlight': function(el) {},
-                'highlightOnScroll': true,
-                'highlightOffset': 100,
-                'anchorName': function(i, heading, prefix) {
-                    return prefix+i;
-                },
-                'itemClass': function(i, heading, $heading, prefix) {
-                    return 'toc-' + $heading[0].tagName.toLowerCase();
-                },
-                'countH2': 0,
-                'countH3': 0,
-                'countH4': 0,
-                'countH5': 0,
-                'headerText': function(i, heading, $heading) {
-                    var prefix = '';
-
-                    switch ($heading[0].tagName.toLowerCase()) {
-                        case 'h2':
-                            this.countH2 += 1;
-                            prefix = this.countH2 + ' ';
-                            break;
-                        case 'h3':
-                            this.countH3 += 1;
-                            prefix = this.countH2 + '.' + this.countH3 + ' ';
-                            break;
-                        case 'h4':
-                            this.countH4 += 1;
-                            prefix = this.countH2 + '.' + this.countH3 + '.' + this.countH4 + ' ';
-                            break;
-                        case 'h5':
-                            this.countH5 += 1;
-                            prefix = this.countH2 + '.' + this.countH3 + '.' + this.countH4 + '.' + this.countH5 + ' ';
+{% if page.group != 'navigation' %}
+    <div class="mobile-toc">
+        <div class="space size-1"></div>
+        <div class="text-center">
+            <p>内容列表 [ <a class="mobile-toc-toggle" href="#">隐藏</a> ]</p>
+        </div>
+        <div class="mobile-toc-content">
+        </div>
+        <script>
+            $(function($) {
+                $('.mobile-toc .mobile-toc-toggle').click(function() {
+                    if ($('.mobile-toc-content').css('display') == 'none') {
+                        $('.mobile-toc-content').css('display', '');
+                        $('.mobile-toc-toggle').text('隐藏')
+                    } else {
+                        $('.mobile-toc-content').css('display', 'none');
+                        $('.mobile-toc-toggle').text('显示')
                     }
+                });
 
-                    // Adding Numbers to Article Content
-                    $heading[0].textContent = prefix + $heading[0].textContent;
+                $('.mobile-toc .mobile-toc-content').toc({
+                    'selectors': 'h2, h3, h4, h5',
+                    'container': '#article',
+                    'smoothScrolling': true,
+                    'prefix': 'toc',
+                    'onHighlight': function(el) {},
+                    'highlightOnScroll': true,
+                    'highlightOffset': 100,
+                    'anchorName': function(i, heading, prefix) {
+                        return prefix+i;
+                    },
+                    'itemClass': function(i, heading, $heading, prefix) {
+                        return 'toc-' + $heading[0].tagName.toLowerCase();
+                    },
+                    'countH2': 0,
+                    'countH3': 0,
+                    'countH4': 0,
+                    'countH5': 0,
+                    'headerText': function(i, heading, $heading) {
+                        var prefix = '';
 
-                    return $heading.text();
-                }
+                        switch ($heading[0].tagName.toLowerCase()) {
+                            case 'h2':
+                                this.countH2 += 1;
+                                prefix = this.countH2 + ' ';
+                                break;
+                            case 'h3':
+                                this.countH3 += 1;
+                                prefix = this.countH2 + '.' + this.countH3 + ' ';
+                                break;
+                            case 'h4':
+                                this.countH4 += 1;
+                                prefix = this.countH2 + '.' + this.countH3 + '.' + this.countH4 + ' ';
+                                break;
+                            case 'h5':
+                                this.countH5 += 1;
+                                prefix = this.countH2 + '.' + this.countH3 + '.' + this.countH4 + '.' + this.countH5 + ' ';
+                        }
+
+                        // Adding Numbers to Article Content
+                        $heading[0].textContent = prefix + $heading[0].textContent;
+
+                        return $heading.text();
+                    }
+                });
             });
-        });
-    </script>
-    <div class="space size-1"></div>
-</div>
+        </script>
+        <div class="space size-1"></div>
+    </div>
+{% endif %}
