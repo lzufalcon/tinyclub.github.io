@@ -161,9 +161,6 @@
 #article .article-title h1 {
   font-size: 2.2rem; }
 
-#article .article-content * {
-  font-size: 1.6rem; }
-
 #article .article-content h1 {
   font-size: 3rem; }
 
@@ -185,6 +182,9 @@
 
 #article .article-content h6 {
   font-size: 1rem; }
+
+#article .article-content p, #article .article-content a {
+  font-size: 1.6rem; }
 
 #article .article-content img {
   max-width: 100%; }
