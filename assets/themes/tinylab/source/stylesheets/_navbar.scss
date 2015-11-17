@@ -33,5 +33,14 @@
         .navbar-default .navbar-nav>.active>a:hover {
             background-color: transparent;
         }
+
+        @media screen and (min-width: 1024px){
+            .navbar-header {
+                width: 380px;
+                height: 50px;
+                background-size: contain;
+                background-image: url('/assets/themes/tinylab/images/navbar-decoration.png');
+            }
+        }
     }
 }
