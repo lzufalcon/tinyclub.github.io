@@ -5,7 +5,7 @@
     border-radius: 0; }
     #top_wrap #navbar .navbar .navbar-nav a {
       font-size: 1.5rem;
-      margin: 0 -3px;
+      margin: 0;
       text-align: center; }
     #top_wrap #navbar .navbar .navbar-nav a:hover {
       color: #eeeeee; }
