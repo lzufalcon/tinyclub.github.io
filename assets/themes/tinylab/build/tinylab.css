@@ -17,12 +17,18 @@
   #top_wrap #navbar .navbar-default .navbar-nav > .active > a:focus,
   #top_wrap #navbar .navbar-default .navbar-nav > .active > a:hover {
     background-color: transparent; }
-  @media screen and (min-width: 1024px) {
-    #top_wrap #navbar .navbar-header {
-      width: 380px;
-      height: 50px;
-      background-size: contain;
-      background-image: url("/assets/themes/tinylab/images/navbar-decoration.png"); } }
+  #top_wrap #navbar .navbar-brand {
+    padding: 10px;
+    width: 300px; }
+    #top_wrap #navbar .navbar-brand .navbar-slogan {
+      margin-left: 5px;
+      padding-left: 10px;
+      border-left: 1px #aaaaaa solid; }
+  @media screen and (max-width: 1024px) {
+    #top_wrap #navbar .navbar-brand {
+      width: 150px; }
+      #top_wrap #navbar .navbar-brand .navbar-slogan {
+        display: none; } }
 
 #sidebar .panel {
   border-radius: 0;
@@ -88,8 +94,10 @@
   #sidebar #toc {
     display: none; } }
 
-#articles_list .article .article-title a:hover {
-  color: #aaaaaa; }
+#articles_list .article .article-title h3 {
+  font-size: 2.2rem; }
+  #articles_list .article .article-title h3 a:hover {
+    color: #aaaaaa; }
 
 #articles_list .article .article-information .article-time {
   margin: 5px 0;
@@ -100,14 +108,13 @@
   padding-right: 0; }
   #articles_list .article .article-information .article-group a, #articles_list .article .article-information .article-category a, #articles_list .article .article-information .article-album a {
     font-size: 1.3rem;
-    color: #616e7d;
+    color: #798998;
     padding: 2px 5px; }
   #articles_list .article .article-information .article-group i, #articles_list .article .article-information .article-category i, #articles_list .article .article-information .article-album i {
-    color: #616e7d; }
+    font-size: 100%;
+    color: #798998; }
   #articles_list .article .article-information .article-group a:hover, #articles_list .article .article-information .article-category a:hover, #articles_list .article .article-information .article-album a:hover {
     color: #aaaaaa; }
-  #articles_list .article .article-information .article-group i, #articles_list .article .article-information .article-category i, #articles_list .article .article-information .article-album i {
-    font-size: 100%; }
 
 #articles_pagination ul {
   margin: 0;
@@ -122,6 +129,31 @@
       color: #333333; }
     #articles_pagination ul li.disabled a {
       color: #e4e4e4; }
+
+@media screen and (max-width: 768px) {
+  #articles_list .article .article-title h3 {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 5px 0; }
+  #articles_list .article .article-information .article-time {
+    float: right;
+    margin: -25px 0 0 0;
+    padding: 0;
+    font-size: 10px; }
+  #articles_list .article .article-information .article-group, #articles_list .article .article-information .article-category, #articles_list .article .article-information .article-album {
+    margin: 0;
+    padding: 0; }
+    #articles_list .article .article-information .article-group a, #articles_list .article .article-information .article-category a, #articles_list .article .article-information .article-album a {
+      font-size: 1.2rem;
+      padding: 0; }
+    #articles_list .article .article-information .article-group i, #articles_list .article .article-information .article-category i, #articles_list .article .article-information .article-album i {
+      padding-left: 3px;
+      font-size: 80%; }
+  #articles_list .article .separator {
+    margin: 0.5rem 0; } }
+
+#article .article-title h1 {
+  font-size: 2.2rem; }
 
 #article .article-information .article-group, #article .article-information .article-category, #article .article-information .article-tag, #article .article-information .article-album {
   margin: 5px 0;

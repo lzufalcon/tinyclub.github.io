@@ -34,12 +34,33 @@
             background-color: transparent;
         }
 
-        @media screen and (min-width: 1024px){
-            .navbar-header {
-                width: 380px;
-                height: 50px;
-                background-size: contain;
-                background-image: url('/assets/themes/tinylab/images/navbar-decoration.png');
+        //@media screen and (min-width: 1024px){
+        //    .navbar-header {
+        //        width: 380px;
+        //        height: 50px;
+        //        background-size: contain;
+        //        background-image: url('/assets/themes/tinylab/images/navbar-decoration.png');
+        //    }
+        //}
+
+        .navbar-brand {
+            padding: 10px;
+            width: 300px;
+
+            .navbar-slogan {
+                margin-left: 5px;
+                padding-left: 10px;
+                border-left: 1px #aaaaaa solid;
+            }
+        }
+
+        @media screen and (max-width: 1024px){
+            .navbar-brand {
+                width: 150px;
+
+                .navbar-slogan {
+                    display: none;
+                }
             }
         }
     }

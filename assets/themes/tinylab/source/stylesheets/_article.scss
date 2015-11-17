@@ -1,4 +1,10 @@
 #article {
+    .article-title {
+        h1 {
+            font-size: 2.2rem;
+        }
+    }
+
     .article-information {
         .article-group, .article-category, .article-tag, .article-album {
             margin: 5px 0;
