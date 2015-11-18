@@ -39,6 +39,10 @@
             font-size: 1.6rem;
         }
 
+        sup {
+            font-size: 1.2rem;
+        }
+
         img {
             max-width: 100%;
         }
@@ -188,6 +192,25 @@
 
         .toc-h5 {
             margin-left: 90px;
+        }
+    }
+
+    .author-box-wrap {
+        a {
+            color: #333333;
+        }
+
+        a:hover {
+            color: #aaaaaa;
+        }
+
+        a i {
+            font-size: 130%;
+            margin: 5px;
+        }
+
+        .popover, .popover-title {
+            border-radius: 0;
         }
     }
 

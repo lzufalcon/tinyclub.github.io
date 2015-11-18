@@ -25,16 +25,16 @@ order: 50
 
 欢迎阅读 [Hello TinyLab / 泰晓科技](/hello-tinylab)，进一步了解本站的由来。
 
-## 联系
+### 联系
 
 * Q 群：321737134
 * 微博：[泰晓科技](http://weibo.com/tinylaborg)
 * 微信公众号：泰晓科技
 
-## 关注
+### 关注
 
 {% include widgets/contact %}
 
-## 赞助
+### 赞助
 
 {% include widgets/sponsor %}

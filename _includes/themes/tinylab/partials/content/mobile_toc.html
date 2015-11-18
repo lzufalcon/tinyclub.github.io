@@ -42,14 +42,20 @@
                         switch ($heading[0].tagName.toLowerCase()) {
                             case 'h2':
                                 this.countH2 += 1;
+                                this.countH3 = 0;
+                                this.countH4 = 0;
+                                this.countH5 = 0;
                                 prefix = this.countH2 + ' ';
                                 break;
                             case 'h3':
                                 this.countH3 += 1;
+                                this.countH4 = 0;
+                                this.countH5 = 0;
                                 prefix = this.countH2 + '.' + this.countH3 + ' ';
                                 break;
                             case 'h4':
                                 this.countH4 += 1;
+                                this.countH5 = 0;
                                 prefix = this.countH2 + '.' + this.countH3 + '.' + this.countH4 + ' ';
                                 break;
                             case 'h5':
@@ -58,7 +64,7 @@
                         }
 
                         // Adding Numbers to Article Content
-                        $heading[0].childNodes[0].textContent = prefix + $heading[0].childNodes[0].textContent;
+                        $heading[0].childNodes[0].textContent = (prefix + $heading[0].childNodes[0].textContent).replace(new RegExp('^[0\.]+'), '');
 
                         return $heading.text();
                     }
