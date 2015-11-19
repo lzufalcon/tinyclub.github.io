@@ -63,7 +63,7 @@
                                 prefix = this.countH2 + '.' + this.countH3 + '.' + this.countH4 + '.' + this.countH5 + ' ';
                         }
 
-                        // Adding Numbers to Article Content
+                        /* Adding Numbers to Article Content */
                         $heading[0].childNodes[0].textContent = (prefix + $heading[0].childNodes[0].textContent).replace(new RegExp('^[0\.]+'), '');
 
                         return $heading.text();

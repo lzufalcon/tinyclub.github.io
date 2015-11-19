@@ -75,11 +75,11 @@
             $('#float_wrapper').removeClass('opened-nav');
         }
 
-        // Open / Close
+        /* Open / Close */
 
         button.addEventListener('click', function(e) {
             if (!e) var e = window.event;
-            e.stopPropagation();//so that it doesn't trigger click event on document
+            e.stopPropagation(); /* so that it doesn't trigger click event on document */
 
             if (!open) {
                 openNav();
