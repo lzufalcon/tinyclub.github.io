@@ -27,18 +27,30 @@
     <div id="float_overlay" class="float-overlay"></div>
 
     <div id="float_wrapper" class="float-wrapper">
-        <a href="{{ previous_href }}">
-            <button class="float-action-button"><i class="fa fa-angle-left"></i></button>
-        </a>
+        {% if previous_href != "#" %}
+            <a href="{{ previous_href }}">
+                <button class="float-action-button"><i class="fa fa-angle-left"></i></button>
+            </a>
+        {% else %}
+            <a href="#">
+                <button class="float-action-button"><i class="fa fa-angle-left"></i></button>
+            </a>
+        {% endif %}
         <a href="#search_box">
             <button class="float-action-button"><i class="fa fa-search"></i></button>
         </a>
         <a href="/">
             <button class="float-action-button"><i class="fa fa-home"></i></button>
         </a>
-        <a href="{{ next_href }}">
-            <button class="float-action-button"><i class="fa fa-angle-right"></i></button>
-        </a>
+        {% if next_href != "#" %}
+            <a href="{{ next_href }}">
+                <button class="float-action-button"><i class="fa fa-angle-right"></i></button>
+            </a>
+        {% else %}
+            <a href="#">
+                <button class="float-action-button"><i class="fa fa-angle-right"></i></button>
+            </a>
+        {% endif %}
     </div>
 </div>
 
