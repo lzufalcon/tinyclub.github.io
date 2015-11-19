@@ -8,6 +8,9 @@ encoding: utf-8
 safe: true
 
 markdown: kramdown
+sass:
+  sass_dir: assets/themes/tinylab/_sass
+  style: compressed
 # markdown: redcarpet
 # redcarpet:
 #  extensions: ["no_intra_emphasis", "autolink", "tables"]
