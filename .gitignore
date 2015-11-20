@@ -17,3 +17,4 @@ pdfs/*
 
 .idea
 node_modules
+.sass-cache
