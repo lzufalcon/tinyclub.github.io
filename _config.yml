@@ -5,8 +5,6 @@ permalink: /:title
 baseurl: /
 encoding: utf-8
 
-safe: true
-
 markdown: kramdown
 sass:
   sass_dir: assets/themes/tinylab/_sass
@@ -17,6 +15,7 @@ sass:
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "TODO.md", "tools", "pdfs", '.idea']
 highlighter: pygments
 
+gems: [jekyll-paginate]
 paginate: 10
 
 # Themes are encouraged to use these universal variables
@@ -47,6 +46,8 @@ JB :
   ASSET_PATH : false
   IMAGE_PATH : false
   
+  theme_name: tinylab.org
+
   archive_path: /archive.html
   authors_path: /authors.html
   categories_path : /categories.html
