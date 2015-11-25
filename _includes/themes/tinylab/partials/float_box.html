@@ -23,34 +23,32 @@
 {% endif %}
 
 <div class="float_box">
-    <a href="#">
-        <button id="float_button" class="float-button"><i class="fa fa-umbrella"></i></button>
-    </a>
+    <button id="float_button" class="float-button"><i class="fa fa-umbrella"></i></button>
     <div id="float_overlay" class="float-overlay"></div>
 
     <div id="float_wrapper" class="float-wrapper">
         {% if previous_href != "#" %}
             <a href="{{ previous_href }}">
-                <button class="float-action-button"><i class="fa fa-angle-left"></i></button>
+                <button class="float-button float-action-button"><i class="fa fa-angle-left"></i></button>
             </a>
         {% else %}
             <a href="#">
-                <button class="float-action-button"><i class="fa fa-angle-left"></i></button>
+                <button class="float-button float-action-button"><i class="fa fa-angle-left"></i></button>
             </a>
         {% endif %}
-        <a href="#search_box">
-            <button class="float-action-button"><i class="fa fa-search"></i></button>
+        <a href="#search">
+            <button class="float-button float-action-button"><i class="fa fa-search"></i></button>
         </a>
         <a href="/">
-            <button class="float-action-button"><i class="fa fa-home"></i></button>
+            <button class="float-button float-action-button"><i class="fa fa-home"></i></button>
         </a>
         {% if next_href != "#" %}
             <a href="{{ next_href }}">
-                <button class="float-action-button"><i class="fa fa-angle-right"></i></button>
+                <button class="float-button float-action-button"><i class="fa fa-angle-right"></i></button>
             </a>
         {% else %}
             <a href="#">
-                <button class="float-action-button"><i class="fa fa-angle-right"></i></button>
+                <button class="float-button float-action-button"><i class="fa fa-angle-right"></i></button>
             </a>
         {% endif %}
     </div>
@@ -58,11 +56,6 @@
 
 <script type="text/javascript">
     $(function($) {
-
-        var button = document.getElementById('float_button');
-        var wrapper = document.getElementById('float_wrapper');
-        var overlay = document.getElementById('float_overlay');
-
         var open = false;
 
         function openNav() {
@@ -77,27 +70,15 @@
             $('#float_wrapper').removeClass('opened-nav');
         }
 
-        button.addEventListener('click', function(e) {
-            if (!e) {
-                e = window.event;
-            }
-            e.stopPropagation(); /* so that it doesn't trigger click event on document */
-
+        $('#float_button').click(function() {
             if (!open) {
                 openNav();
             } else {
                 closeNav();
             }
-        }, false);
-
-        wrapper.addEventListener('click', function(e) {
-            e.stopPropagation();
-        }, false);
-
-        document.addEventListener('click', closeNav);
-
-        $('#float_wrapper a').click(function() {
-            closeNav();
         });
+
+        $('#float_overlay').click(closeNav);
+        $('#float_wrapper').click(closeNav);
     });
 </script>

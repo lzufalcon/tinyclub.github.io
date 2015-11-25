@@ -11,10 +11,10 @@
     position: fixed;
     left: 10px;
     bottom: 10px;
-    z-index: 11;
     outline: none;
     padding: 0;
     margin: 0;
+    z-index: 100;
 
     i {
         font-size: 2.4rem;
@@ -32,10 +32,10 @@
     right: 0;
     opacity: 0;
     visibility: hidden;
+    z-index: 10;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     transition: all .3s ease;
-    z-index: 2;
 
     &.on-overlay {
         visibility: visible;
@@ -47,53 +47,40 @@
     position: fixed;
     left: 10px;
     bottom: 10px;
-    z-index: 10;
+    z-index: 50;
 
     a {
         color: #ffffff;
         outline: none;
 
         .float-action-button {
-            font-size: 1.2rem;
-            border: none;
-            background: #22272e;
-            text-align: center;
-            height: 45px;
-            width: 45px;
-            border-radius: 50%;
-            box-shadow: 0 0 3px #171717;
-            position: fixed;
-            left: 10px;
-            bottom: 10px;
-            z-index: 11;
             -webkit-transition: all 0.2s ease-in-out;
             -moz-transition: all 0.2s ease-in-out;
             -ms-transition: all 0.2s ease-in-out;
             -o-transition: all 0.2s ease-in-out;
             transition: all 0.2s ease-in-out;
-            outline: none;
         }
     }
 }
 
 .float-wrapper.opened-nav {
 
-    a:first-child .float-action-button{
+    a:first-child .float-action-button {
         left: 10px;
         bottom: 110px
     }
 
-    a:nth-child(2) .float-action-button{
+    a:nth-child(2) .float-action-button {
         left: 62px;
         bottom: 95px;
     }
 
-    a:nth-child(3) .float-action-button{
+    a:nth-child(3) .float-action-button {
         left: 100px;
         bottom: 60px;
     }
 
-    a:nth-child(4) .float-action-button{
+    a:nth-child(4) .float-action-button {
         left: 110px;
         bottom: 10px;
     }
