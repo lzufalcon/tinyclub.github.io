@@ -72,7 +72,7 @@ Linux时钟管理相关API类型繁多，使用时难免会有很多困惑，比
 
 中断处理分为上下半部分，是为了提高系统响应能力，因为中断在系统中具有最高优先级，呆在里头太久，其他任务就得不到响应。那么中断到底该呆多久，这个当然是越少越好，如果能够比Context Switch小则更好。这意味着，中断处理基本开销应该比任务调度开销要小。
 
-至于Context Switch，我曾经在论文《LINUX实时抢占补丁的研究与实践》第106页进行了介绍，在800MHz的Loongson-2F上正文开销大概在30us以内，当然，这个是跑硬实时Preempt-RT Linux的结果，对于普通到Low-Latency Desktop配置，这个会大一些，算上任务选择的开销，这个扩大到50us~100us应该差不多，当然，频率更高的X86处理器，这个时间可能更小，比如10us。
+至于Context Switch，我曾经在论文《[LINUX实时抢占补丁的研究与实践](/wp-content/uploads/2015/11/linux-preempt-rt-research-and-practice.pdf)》第106页进行了介绍，在800MHz的Loongson-2F上正文开销大概在30us以内，当然，这个是跑硬实时Preempt-RT Linux的结果，对于普通到Low-Latency Desktop配置，这个会大一些，算上任务选择的开销，这个扩大到50us~100us应该差不多，当然，频率更高的X86处理器，这个时间可能更小，比如10us。
 
 对于硬实时系统，这个时间应该控制在10us内。
 
@@ -82,7 +82,7 @@ Linux时钟管理相关API类型繁多，使用时难免会有很多困惑，比
 
 这些场景下都不能睡眠，所以只能使用“忙等”，比如ndelay, udelay以及mdelay，“忙等”的时间必须控制在实时需求内。经过刚才的考量，mdelay一般是不能使用的，除非是某些上面提到到特定场景，比如DVFS，CPU Hotplug以及Big.Little Switch等。如果在原子上下文要用mdelay，那么务必思考如何把任务延迟到workqueue（当然也有threaded irq handler）去做，或者拆分临界区的大小，缩小原子锁的工作范围。
 
-类似的情景，如果说一个任务的工作时间少于50~100us，而且要用周期性的Workqueue去做，那么直接把函数挂到系统队列里头可能更高效，因为挂到系统队列上会带来额外到Context Switch开销，而放在系统工作队列也不会太延迟其他到任务。
+类似的情景，如果说一个任务的工作时间少于50~100us，而且要用周期性的Workqueue去做，那么直接把函数挂到系统队列里头可能更高效，因为挂到系统队列上会带来额到的Context Switch开销，而放在系统工作队列也不会太延迟其他到任务。
 
   * 非原子上下文
 
@@ -140,4 +140,4 @@ Linux时钟管理相关API类型繁多，使用时难免会有很多困惑，比
  [6]: http://help.lockergnome.com/linux/hrtimer-context-switch-overhead-udelay-usleep--ftopict522054.html
  [7]: http://www.docin.com/p-65705331.html
  [8]: http://blog.csdn.net/hzpeterchen/article/details/8090385
- [9]: http://www.docin.com/p-170582115.html
+ [9]: /wp-content/uploads/2015/11/linux-preempt-rt-research-and-practice.pdf
