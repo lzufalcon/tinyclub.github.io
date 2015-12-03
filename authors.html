@@ -128,7 +128,7 @@ comments: false
                 {% assign has_qrcode = author[qrcode] %}
                 {% if has_qrcode %}
                     <div class="author-{{ contact.name }}-qrcode">
-                        <img style="height: 200px; width:200px" src="/images/{{ contact.name }}/{{ author[contact.name] }}.jpg">
+                        <img style="height: 200px; width:200px" alt="contact"  src="/images/{{ contact.name }}/{{ author[contact.name] }}.jpg">
                     </div>
                 {% else %}
                     {% if url != "" %}
