@@ -118,7 +118,7 @@ comments: false
             {% assign title = author.name | append: " (" | append: author.nickname | append: ")" %}
             {% assign content = author.info | replace:"；","<br/>" | replace:";", "<br/>" %}
         {% endif %}
-        <a class="author-{{ contact.name }}" href="{{ url }}" type="button">{{ icon }}</a>
+        <a class="author-{{ contact.name }}" href="{{ url }}">{{ icon }}</a>
         <div class="author-{{ contact.name }}-content popover bottom">
             <div class="arrow"></div>
             <p class="popover-title">{{ title }}</p>
