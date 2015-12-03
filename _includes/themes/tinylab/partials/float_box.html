@@ -23,24 +23,24 @@
 {% endif %}
 
 <div class="float_box">
-    <button id="float_button" class="float-button"><i class="fa fa-umbrella"></i></button>
+    <div id="float_button" class="float-button"><i class="fa fa-umbrella"></i></div>
     <div id="float_overlay" class="float-overlay"></div>
 
     <div id="float_wrapper" class="float-wrapper">
         {% if previous_href != "#" %}
             <a href="{{ previous_href }}">
-                <button class="float-button float-action-button"><i class="fa fa-angle-left"></i></button>
+                <div class="float-button float-action-button"><i class="fa fa-angle-left"></i></div>
             </a>
         {% else %}
             <a href="#">
-                <button class="float-button float-action-button"><i class="fa fa-angle-left"></i></button>
+                <div class="float-button float-action-button"><i class="fa fa-angle-left"></i></div>
             </a>
         {% endif %}
         <a href="#search">
-            <button class="float-button float-action-button"><i class="fa fa-search"></i></button>
+            <div class="float-button float-action-button"><i class="fa fa-search"></i></div>
         </a>
         <a href="/">
-            <button class="float-button float-action-button"><i class="fa fa-home"></i></button>
+            <div class="float-button float-action-button"><i class="fa fa-home"></i></div>
         </a>
         {% if next_href != "#" %}
             <a href="{{ next_href }}">
