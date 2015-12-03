@@ -92,7 +92,7 @@
             {% assign title = author.name | append: " (" | append: author.nickname | append: ")" %}
             {% assign content = author.info | replace:"；","<br/>" | replace:";", "<br/>" %}
         {% endif %}
-        <a id="author_{{ contact.name }}" class="author-contact" href="{{ url }}" type="button">{{ icon }}</a>
+        <a id="author_{{ contact.name }}" class="author-contact" href="{{ url }}">{{ icon }}</a>
         <div id="author_{{ contact.name }}_content" class="popover bottom">
             <div class="arrow"></div>
             <p class="popover-title">{{ title }}</p>
@@ -102,7 +102,7 @@
                 {% assign has_qrcode = author[qrcode] %}
                 {% if has_qrcode %}
                     <div class="author-{{ contact.name }}-qrcode">
-                        <img style="height: 200px; width:200px" src="/images/{{ contact.name }}/{{ author[contact.name] }}.jpg">
+                        <img style="height: 200px; width:200px" alt="contact" src="/images/{{ contact.name }}/{{ author[contact.name] }}.jpg">
                     </div>
                 {% else %}
                     {% if url != "" %}
