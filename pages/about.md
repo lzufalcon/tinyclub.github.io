@@ -33,8 +33,8 @@ order: 50
 
 ### 关注
 
-{% include widgets/contact %}
+{% include themes/tinylab/partials/content/contact.html %}
 
 ### 赞助
 
-{% include widgets/sponsor %}
+{% include themes/tinylab/partials/content/sponsor.html %}

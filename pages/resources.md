@@ -69,7 +69,7 @@ order: 100
                             {%endunless%}
                         {% endif %}
                     {% endif %}
-                    <li><a ref="bookmark" href="{{ article.permalink }}">{{ article.title }}</a></li>
+                    <li><a href="{{ article.permalink }}">{{ article.title }}</a></li>
                 {% endfor %}
             </ul>
         {% endif %}

@@ -32,4 +32,4 @@ comments: false
 {% assign list = list | split:';' | sort | reverse | join:';' %}
 
 <h3>{{ x_label}}{{ y_label}}统计 <sup>({{ site.posts.size }})</sup></h3>
-{% include widgets/svg_statistic %}
+{% include themes/tinylab/partials/content/svg_statistic.html %}

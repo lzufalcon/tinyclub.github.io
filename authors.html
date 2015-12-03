@@ -118,8 +118,8 @@ comments: false
             {% assign title = author.name | append: " (" | append: author.nickname | append: ")" %}
             {% assign content = author.info | replace:"；","<br/>" | replace:";", "<br/>" %}
         {% endif %}
-        <a id="author_{{ contact.name }}" class="author-contact" href="{{ url }}" type="button">{{ icon }}</a>
-        <div id="author_{{ contact.name }}_content" class="popover bottom">
+        <a class="author-{{ contact.name }}" href="{{ url }}" type="button">{{ icon }}</a>
+        <div class="author-{{ contact.name }}-content popover bottom">
             <div class="arrow"></div>
             <p class="popover-title">{{ title }}</p>
             <div class="popover-content">
@@ -133,22 +133,22 @@ comments: false
                 {% else %}
                     {% if url != "" %}
                         <div class="author-{{ contact.name }}-qrcode-generate"></div>
-                        <script type="text/javascript"> $(function ($) { $("#author-box-wrap-{{ post_author_name }} #author_{{ contact.name }}_content .author-{{ contact.name }}-qrcode-generate").qrcode({ text: "{{ url }}", width: 200, height: 200 }) });</script>
+                        <script type="text/javascript"> $(function ($) { $("#author-box-wrap-{{ post_author_name }} .author-{{ contact.name }}-content .author-{{ contact.name }}-qrcode-generate").qrcode({ text: "{{ url }}", width: 200, height: 200 }) });</script>
                     {% endif %}
                 {% endif %}
             </div>
         </div>
         <script>
             $(function($) {
-                $('#author-box-wrap-{{ post_author_name }} #author_{{ contact.name }}').mouseenter(function() {
-                    $('#author-box-wrap-{{ post_author_name }} #author_{{ contact.name }}_content').show();
-                    $('#author-box-wrap-{{ post_author_name }} #author_{{ contact.name }}_content')
-                            .css('top', $('#author-box-wrap-{{ post_author_name }} #author_{{ contact.name }}').position().top + 30)
-                            .css('left', $('#author-box-wrap-{{ post_author_name }} #author_{{ contact.name }}').position().left - 100);
+                $('#author-box-wrap-{{ post_author_name }} .author-{{ contact.name }}').mouseenter(function() {
+                    $('#author-box-wrap-{{ post_author_name }} .author-{{ contact.name }}-content').show();
+                    $('#author-box-wrap-{{ post_author_name }} .author-{{ contact.name }}-content')
+                            .css('top', $('#author-box-wrap-{{ post_author_name }} .author-{{ contact.name }}').position().top + 30)
+                            .css('left', $('#author-box-wrap-{{ post_author_name }} .author-{{ contact.name }}').position().left - 100);
                 });
 
-                $('#author-box-wrap-{{ post_author_name }} #author_{{ contact.name }}').mouseleave(function() {
-                    $('#author-box-wrap-{{ post_author_name }} #author_{{ contact.name }}_content').hide();
+                $('#author-box-wrap-{{ post_author_name }} .author-{{ contact.name }}').mouseleave(function() {
+                    $('#author-box-wrap-{{ post_author_name }} .author-{{ contact.name }}-content').hide();
                 });
             });
         </script>
@@ -181,4 +181,4 @@ comments: false
 {% assign list = list | split:';' | join:';' %}
 
 <h3>{{ x_label}}{{ y_label}}统计 <sup>({{ site.posts.size }})</sup></h3>
-{% include widgets/svg_statistic %}
+{% include themes/tinylab/partials/content/svg_statistic.html %}

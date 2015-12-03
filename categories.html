@@ -153,4 +153,4 @@ comments: false
 {% assign list = list | split:';' | sort | reverse | join:';' %}
 
 <h2 id="{{x_label}}统计-ref">{{ x_label}}统计 <sup>({{ site.posts.size }})</sup></h2>
-{% include widgets/svg_statistic %}
+{% include themes/tinylab/partials/content/svg_statistic.html %}
