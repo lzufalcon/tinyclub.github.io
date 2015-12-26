@@ -52,13 +52,35 @@ order: 30
 
 后者是前者的封装，可以简化命令行的输入。
 
+或者直接把文件名和短地址设置好：
+
+    $ tools/post slug=the-first-post-slug
+
+当然，也可以同时把其他参数都默认设置好，比如标题：
+
+    $ tools/post slug=the-first-post-slug title="第一篇原创文章。。。"
+
+更多参数请参考：
+
+    author='Author'
+    nick="Nick Name"
+    title="A Title"
+    tags="[tag1,tag2]"
+    categories="[category1,category2]"
+    group='Article Group'
+    album='Article Series'
+    tagline='subtitle'
+    description="summary"
+    slug='URL with English characeters'
+
 Markdown 基本用法请参考 [Markdown 语法说明][2] 以及上面创建的文章模板中的说明。
 
 如果希望使用更多样式，可参照 `_posts` 下的其他文章。
 
 *注*：也可以在 `_data/people.yml` 中添加上作者信息后直接通过如下方式创建一个快捷命令以便自动填充作者信息，例如：
 
-    $ ln tools/post tools/falcon.post
+    $ cd tools
+    $ ln -s post falcon.post
 
 把 `falcon` 替换为你自己的昵称即可。
 
