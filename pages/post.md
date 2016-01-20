@@ -7,7 +7,7 @@ permalink: /post/
 order: 30
 ---
 
-泰晓科技 作为一个 Android / Linux 原创交流平台，热烈欢迎大家的参与。
+泰晓科技 作为一个 Android / Linux 原创交流平台，热烈欢迎大家参与。
 
 而参与的最好方式莫过于创作并分享。我们欢迎各类 Android / Linux 原创、翻译文章，也欢迎发布工作机会，递送求职简历。
 
@@ -27,9 +27,9 @@ order: 30
 
 ### 搭建 Jekyll 工作环境
 
-    $ sudo apt-get install ruby ruby-dev rake nodejs
+    $ sudo apt-get install gcc make ruby ruby-dev rake nodejs
 
-    // The latest jekyll requires 2.0 ruby, install it
+    // 新版 jekyll 依赖 ruby >=2.0，以 2.0 为例
     $ sudo apt-get install ruby2.0 ruby2.0-dev ruby2.0-doc
     $ tools/ruby-switch 2.0
 
@@ -202,15 +202,13 @@ Markdown 基本用法请参考 [Markdown 语法说明][2] 以及上面创建的�
 * 一批《[Linux 设备驱动开发详解](http://tinylab.org/book-welfare-for-tinylab-contributors/)》
 * 双十一 [半价购开源硬件 pcDuino8 和 NodeMCU](http://tinylab.org/board-welfare-for-tinylab-users/)
 
-另外，我们还在不断争取其他的福利，这些福利我们将直接导入 [泰晓开源小店](http://weidian.com/?userid=335178200)，允许大家以最低低到成本价的折扣拍到。
+另外，我们还在不断争取其他的福利，这些福利将直接导入 [泰晓开源小店](http://weidian.com/?userid=335178200)，允许大家以最低低到成本价的折扣拍到。
 
 如果没有特别声明，基本的折扣政策如下：
 
-* 最近一个月有贡献，一率 9 折
-* 最近三个月有贡献，前 5 件一率 8 折
-* 最近半年有贡献，前 2 件一率 7 折
-* 一次性购买 10 件以上一率 8 折
-* 逢国家法定节日限购一件 8 折
+* 最近一个月有贡献，一率 8 折
+* 连续一个季度有贡献，前 2 件一率 5 折
+* 一次性购买 5 件以上一率 7 折
 
  [1]: https://github.com/tinyclub/tinylab.org.git
  [2]: http://wowubuntu.com/markdown/
