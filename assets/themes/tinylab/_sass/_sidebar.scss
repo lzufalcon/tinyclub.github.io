@@ -65,30 +65,40 @@
     #toc {
         min-width: 280px;
 
-        ul {
-            padding: 0;
-            list-style: none;
+        &.affix {
+            top: 10px;
+            max-width: 280px;
+        }
 
-            li {
-                margin: 0;
+        .panel-body {
+            max-height: 650px;
+            overflow-y: scroll;
+
+            ul {
                 padding: 0;
+                list-style: none;
 
-                a {
-                    font-size: 1.5rem;
-                    color: #333333;
+                li {
+                    margin: 0;
+                    padding: 0;
 
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                }
-
-                a:hover {
-                    color: #aaaaaa;
-                }
-
-                &.active {
                     a {
-                        background-color: #dddddd;
+                        font-size: 1.5rem;
+                        color: #333333;
+
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+
+                    a:hover {
+                        color: #aaaaaa;
+                    }
+
+                    &.active {
+                        a {
+                            background-color: #dddddd;
+                        }
                     }
                 }
             }
@@ -112,11 +122,6 @@
 
         .panel-body > ul > ul > ul > ul > ul > li > a {
             padding-left: 90px;
-        }
-
-        &.affix {
-            top: 10px;
-            max-width: 280px;
         }
     }
 
