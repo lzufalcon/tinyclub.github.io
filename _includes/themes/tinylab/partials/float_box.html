@@ -23,34 +23,40 @@
 {% endif %}
 
 <div class="float_box">
-    <div id="float_button" class="float-button"><i class="fa fa-umbrella"></i></div>
+    <div id="float_button" class="float-button"><i class="fa fa-lightbulb"></i></div>
     <div id="float_overlay" class="float-overlay"></div>
 
     <div id="float_wrapper" class="float-wrapper">
-        {% if previous_href != "#" %}
-            <a href="{{ previous_href }}">
-                <div class="float-button float-action-button"><i class="fa fa-angle-left"></i></div>
-            </a>
-        {% else %}
-            <a href="#">
-                <div class="float-button float-action-button"><i class="fa fa-angle-left"></i></div>
-            </a>
-        {% endif %}
-        <a href="#search">
-            <div class="float-button float-action-button"><i class="fa fa-search"></i></div>
+        <a href="#article_comments">
+            <div class="float-button float-action-button"><i class="fa fa-angle-down"></i></div>
         </a>
+        {% if next_href != "#" %}
+        <a href="{{ next_href }}">
+            <div class="float-button float-action-button"><i class="fa fa-angle-right"></i></div>
+        </a>
+        {% else %}
+        <a href="#">
+            <div class="float-button float-action-button"><i class="fa fa-angle-right color-spry-grey-storm"></i></div>
+        </a>
+        {% endif %}
         <a href="/">
             <div class="float-button float-action-button"><i class="fa fa-home"></i></div>
         </a>
-        {% if next_href != "#" %}
-            <a href="{{ next_href }}">
-                <div class="float-button float-action-button"><i class="fa fa-angle-right"></i></div>
-            </a>
+        <a href="#search">
+            <div class="float-button float-action-button"><i class="fa fa-search"></i></div>
+        </a>
+        {% if previous_href != "#" %}
+        <a href="{{ previous_href }}">
+            <div class="float-button float-action-button"><i class="fa fa-angle-left"></i></div>
+        </a>
         {% else %}
-            <a href="#">
-                <div class="float-button float-action-button"><i class="fa fa-angle-right"></i></div>
-            </a>
+        <a href="#">
+            <div class="float-button float-action-button"><i class="fa fa-angle-left color-spry-grey-storm"></i></div>
+        </a>
         {% endif %}
+        <a href="#">
+            <div class="float-button float-action-button"><i class="fa fa-angle-up"></i></div>
+        </a>
     </div>
 </div>
 
@@ -58,19 +64,23 @@
     $(function($) {
         var open = false;
 
+        var float_button = $('#float_button');
+        var float_wrapper = $('#float_wrapper');
+        var float_overlay = $('#float_overlay');
+
         function openNav() {
             open = true;
-            $('#float_overlay').addClass('on-overlay');
-            $('#float_wrapper').addClass('opened-nav');
+            float_wrapper.addClass('opened-nav');
+            float_overlay.addClass('on-overlay');
         }
 
         function closeNav() {
             open = false;
-            $('#float_overlay').removeClass('on-overlay');
-            $('#float_wrapper').removeClass('opened-nav');
+            float_wrapper.removeClass('opened-nav');
+            float_overlay.removeClass('on-overlay');
         }
 
-        $('#float_button').click(function() {
+        float_button.click(function() {
             if (!open) {
                 openNav();
             } else {
@@ -78,7 +88,15 @@
             }
         });
 
-        $('#float_overlay').click(closeNav);
-        $('#float_wrapper').click(closeNav);
+        float_button.mouseenter(function() {
+            openNav();
+        });
+
+        float_wrapper.mouseleave(function() {
+            closeNav();
+        });
+
+        float_wrapper.click(closeNav);
+        float_overlay.click(closeNav);
     });
 </script>

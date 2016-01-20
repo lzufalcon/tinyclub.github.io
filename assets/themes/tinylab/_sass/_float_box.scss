@@ -4,20 +4,20 @@
     background: #22272e;
     color: #ffffff;
     text-align: center;
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     box-shadow: 0 0 3px #171717;
     position: fixed;
     left: 10px;
     bottom: 10px;
     outline: none;
-    padding: 10px 0 0 0;
+    padding: 8px 0 0 0;
     margin: 0;
     z-index: 100;
 
     i {
-        font-size: 2.4rem;
+        font-size: 2.3rem;
     }
 }
 
@@ -47,6 +47,8 @@
     position: fixed;
     left: 10px;
     bottom: 10px;
+    height: 340px;
+    width: 40px;
     z-index: 50;
 
     a {
@@ -67,21 +69,43 @@
 
     a:first-child .float-action-button {
         left: 10px;
-        bottom: 110px
+        bottom: 60px
     }
 
     a:nth-child(2) .float-action-button {
-        left: 62px;
-        bottom: 95px;
+        left: 10px;
+        bottom: 110px
     }
 
     a:nth-child(3) .float-action-button {
-        left: 100px;
-        bottom: 60px;
+        left: 10px;
+        bottom: 160px;
+
+        padding-top: 8px;
+        i.fa-search {
+            margin-top: 5px;
+            font-size: 1.8rem;
+        }
     }
 
     a:nth-child(4) .float-action-button {
-        left: 110px;
-        bottom: 10px;
+        left: 10px;
+        bottom: 210px;
+
+        padding-top: 8px;
+        i.fa-search {
+            margin-top: 5px;
+            font-size: 1.8rem;
+        }
+    }
+
+    a:nth-child(5) .float-action-button {
+        left: 10px;
+        bottom: 260px
+    }
+
+    a:nth-child(6) .float-action-button {
+        left: 10px;
+        bottom: 310px
     }
 }
