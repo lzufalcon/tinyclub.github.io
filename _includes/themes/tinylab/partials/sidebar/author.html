@@ -52,7 +52,7 @@
 
         {% if contact.name == "site" and author['site'] %}
             {% assign icon = '<i class="fa fa-export-alt"></i>' %}
-            {% assign url = author.site %}
+            {% assign url = author.site | prepend: 'http://' %}
             {% assign title = "扫码访问 " | append: author.site  %}
         {% endif %}
 
@@ -65,7 +65,7 @@
         {% if contact.name == "github" and author['github'] %}
             {% assign icon = '<i class="fa fa-github-circled"></i>' %}
             {% assign url = "http://github.com/" | append: author.github %}
-            {% assign title = "Github: " | append: author.github %}
+            {% assign title = "GitHub: " | append: author.github %}
         {% endif %}
 
         {% if contact.name == "weibo" and author['weibo'] %}
@@ -77,7 +77,6 @@
         {% if contact.name == "wechat" and author['wechat'] %}
             {% assign icon = '<i class="fa fa-wechat"></i>' %}
             {% assign title = "扫码关注微信 " | append: author.wechat %}
-            {% assign url = author.wechat %}
         {% endif %}
 
         {% if contact.name == "sponsor" and author['sponsor'] %}
